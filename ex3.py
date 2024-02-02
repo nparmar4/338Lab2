@@ -23,9 +23,7 @@ cProfile.run('re.compile("sub_function, test_fuction,third_function")')
 
 """
 1. What is a profiler, and what does it do? [0.25 pts]
-    A profiler module that provides a deterministic profiling of a python program. This profile os full 
-    of tatistics that describ how often certain parts of the program are executed and how long they are 
-    executed for. 
+    A profiler module that provides a deterministic profiling of a python program. This profile os full of tatistics that describ how often certain parts of the program are executed and how long they are executed for. 
 
 2. How does profiling differs from benchmarking? [0.25 pts]
     Benchmarking is concerned with the overall perfomance of a program or piece of code, while profiling 
@@ -45,8 +43,8 @@ cProfile.run('re.compile("sub_function, test_fuction,third_function")')
                 1    0.000    0.000    0.000    0.000 ex3.py:11(test_function) 
                 1    0.000    0.000   68.741   68.741 ex3.py:17(third_function)
                 1   68.741   68.741   68.741   68.741 ex3.py:19(<listcomp>)    
-            55/10    0.000    0.000    0.000    0.000 ex3.py:4(sub_function)   
-            10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+                55/10    0.000    0.000    0.000    0.000 ex3.py:4(sub_function)   
+                10    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
                 1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
     
     The total execution time is in the first line, next to the number of function calls. 
