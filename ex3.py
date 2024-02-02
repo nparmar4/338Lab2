@@ -23,10 +23,13 @@ cProfile.run('re.compile("sub_function, test_fuction,third_function")')
 
 """
 1. What is a profiler, and what does it do? [0.25 pts]
-    A profiler module that provides a deterministic profiling of a python program. This profile os full of tatistics that describ how often certain parts of the program are executed and how long they are executed for. 
+    A profiler module that provides a deterministic profiling of a python program. This profile os full 
+    of tatistics that describ how often certain parts of the program are executed and how long they are 
+    executed for. 
 
 2. How does profiling differs from benchmarking? [0.25 pts]
-    Benchmarking is concerned with the overall perfomance of a program or piece of code, while profiling looks at smaller parts of the code and reveals which function takes up the most execution time.     
+    Benchmarking is concerned with the overall perfomance of a program or piece of code, while profiling 
+    looks at smaller parts of the code and reveals which function takes up the most execution time.     
 
 3. Use a profiler to measure execution time of the program (skip function definitions) [0.25 pt]
     Added the following line to the code: cProfile.run('re.compile("sub_function, test_fuction,third_function")')
