@@ -26,7 +26,7 @@ def measure_time(search_function, arr, target, number=100):
 
 def main():
     sizes = [1000, 2000, 4000, 8000, 16000, 32000]
-    iterations = 1000
+    iterations = 100
 
     for size in sizes:
         arr = sorted([random.randint(1, 100000) for _ in range(size)])
