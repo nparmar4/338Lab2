@@ -34,7 +34,7 @@ def main():
         total_time_binary = 0
 
         for _ in range(iterations):
-            target = random.choice(arr)
+            target = 4000
 
             # Measure time for linear search
             total_time_linear += measure_time(linear_search, arr, target)
