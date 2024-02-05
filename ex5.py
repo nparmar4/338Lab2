@@ -24,6 +24,7 @@ def binary_search(arr, target):
 def measure_time(search_function, arr, target, number=100):
     return timeit.timeit(lambda: search_function(arr, target), number=number)
 
+# Used ChatGPT for the following time calculations:
 def main():
     sizes = [1000, 2000, 4000, 8000, 16000, 32000]
     iterations = 100
@@ -50,3 +51,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# 4. Linear search has a linear time complexity, and the interpolating function should be a straight line.
+#    Binary search has a logarithmic time complexity, but when measured in terms of the number of iterations, it shows quadratic behavior. 
