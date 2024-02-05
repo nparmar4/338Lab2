@@ -25,7 +25,7 @@ This part of the code makes a linear relationship assumption between the indices
 
 5. In the case of smaller datasets or when a target element is located near the starting point of an array. This is due to the constant time complexity of a linear search, which makes it more efficient in scenarios where the computational overhead of certain algorithms outweigh the benefits. Linear search is also better and preferred in cases where the target values in located near the starting point of the array. This helps to avoid overhead related to divided search spaces in binary and interpolation algorithms.
 
-6. In order for binary and interpolation search algorithms to bypass the limitation on unsorted data, the simplest solution is to first sort the unsorted data. By sorting thr data first, it will enable the binary and interpolation searches to function as expected and correctly.
+6. In order for binary and interpolation search algorithms to bypass the limitation on unsorted data, the simplest solution is to first sort the unsorted data. By sorting the data first, it will enable the binary and interpolation searches to function as expected and correctly.
 
 Sources used to research:
 - https://www.geeksforgeeks.org/interpolation-search/
