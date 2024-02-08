@@ -1,5 +1,13 @@
 import timeit
 import random
+import matplotlib.pyplot as plt
+import numpy as np
+
+def linearInterpolation(x, b, c):
+    return x * b + c
+
+def logarithmicInterpolation(x, a, b):
+    return a * np.log(x) + b
 
 def linear_search(arr, target):
     for i in range(len(arr)):
@@ -24,18 +32,20 @@ def binary_search(arr, target):
 def measure_time(search_function, arr, target, number=100):
     return timeit.timeit(lambda: search_function(arr, target), number=number)
 
-# Used ChatGPT for the following time calculations:
 def main():
     sizes = [1000, 2000, 4000, 8000, 16000, 32000]
     iterations = 100
 
+    linear_avg_times = []
+    binary_avg_times = []
+
     for size in sizes:
-        arr = sorted([random.randint(1, 100000) for _ in range(size)])
         total_time_linear = 0
         total_time_binary = 0
 
         for _ in range(iterations):
-            target = 4000
+            arr = sorted([random.randint(1, 100000) for _ in range(size)])
+            target = random.choice(arr)  # Choose a random target in the array
 
             # Measure time for linear search
             total_time_linear += measure_time(linear_search, arr, target)
@@ -47,7 +57,18 @@ def main():
         avg_time_linear = total_time_linear / iterations
         avg_time_binary = total_time_binary / iterations
 
-        print(f"Size: {size}, Linear Search Avg Time: {avg_time_linear}, Binary Search Avg Time: {avg_time_binary}")
+        linear_avg_times.append(avg_time_linear)
+        binary_avg_times.append(avg_time_binary)
+
+    # Plotting
+    plt.plot(sizes, linear_avg_times, label='Linear Search')
+    plt.plot(sizes, binary_avg_times, label='Binary Search')
+
+    plt.xlabel('Array Size')
+    plt.ylabel('Average Time (seconds)')
+    plt.title('Average Search Time Complexity')
+    plt.legend()
+    plt.show()
 
 if __name__ == "__main__":
     main()
