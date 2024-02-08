@@ -60,20 +60,29 @@ def main():
         linear_avg_times.append(avg_time_linear)
         binary_avg_times.append(avg_time_binary)
 
-    # Plotting
+    # Plot for Linear Search
     plt.plot(sizes, linear_avg_times, label='Linear Search')
-    plt.plot(sizes, binary_avg_times, label='Binary Search')
-
     plt.xlabel('Array Size')
     plt.ylabel('Average Time (seconds)')
-    plt.title('Average Search Time Complexity')
+    plt.title('Linear Search Time Complexity')
     plt.legend()
     plt.show()
+
+    # Plot for Binary Search
+    plt.plot(sizes, binary_avg_times, label='Binary Search')
+    plt.xlabel('Array Size')
+    plt.ylabel('Average Time (seconds)')
+    plt.title('Binary Search Time Complexity')
+    plt.legend()
+    plt.yscale('log')  # Set y-axis to logarithmic scale
+    plt.show()
+
 
 if __name__ == "__main__":
     main()
 
 # 4. Linear search has a linear time complexity, and the interpolating function should be a straight line.
-#    Binary search has a logarithmic time complexity, but when measured in terms of the number of iterations, it shows curved behavior. 
-#    Because the values are so close to each other and log functions grow very slowly, it appears to be straight. 
-#    It is also much faster than linear search. 
+#Binary search has a logarithmic time complexity, but when measured in terms of the number of iterations, it shows curved behavior. 
+#It is also much faster than linear search. The y-axis scale for the binary search graph is much 
+#smaller than the linear search graph because it is so much faster that if the scale is not modified, 
+#it will appear as a horizontal line.
