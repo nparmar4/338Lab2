@@ -53,4 +53,6 @@ if __name__ == "__main__":
     main()
 
 # 4. Linear search has a linear time complexity, and the interpolating function should be a straight line.
-#    Binary search has a logarithmic time complexity, but when measured in terms of the number of iterations, it shows quadratic behavior. 
+#    Binary search has a logarithmic time complexity, but when measured in terms of the number of iterations, it shows curved behavior. 
+#    Because the values are so close to each other and log functions grow very slowly, it appears to be straight. 
+#    It is also much faster than linear search. 
